@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        {% block main %}
+        {% endblock %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="{% static 'assets/js/scripts.js'%}"></script>
+    </body>
+</html>
