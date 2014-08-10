@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from rest_framework.urlpatterns import format_suffix_patterns
-from .views import ListItemGroupLCAPIView, ListItemGroupRUDAPIView, ListHomeView
+from .views import ListItemGroupLCAPIView, ListItemGroupRUDAPIView, ListHomeView #, list_home_view
 
 api_patterns = format_suffix_patterns(patterns(
     '',
@@ -11,5 +11,6 @@ api_patterns = format_suffix_patterns(patterns(
 urlpatterns = patterns(
     '',
     url(r'^lists/', ListHomeView.as_view()),
+    #url(r'^lists/', list_home_view),
     url(r'^api/', include(api_patterns), name='lists_api'),
 )

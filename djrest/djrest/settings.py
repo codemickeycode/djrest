@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'lists',
+    'djrest',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,6 +94,10 @@ STATIC_FILES_DIR = (
     os.path.join(BASE_DIR, 'static-raw'),
 )
 
+STATICFILES_FINDERS = (
+   'django.contrib.staticfiles.finders.FileSystemFinder',
+   'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 ###### TEMPLATE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
