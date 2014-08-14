@@ -88,10 +88,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static-raw/'
+STATIC_URL = '/static'
 
 STATIC_FILES_DIR = (
-    os.path.join(BASE_DIR, 'static-raw'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 STATICFILES_FINDERS = (
